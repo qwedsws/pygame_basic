@@ -32,6 +32,10 @@ while True:
     screen.blit(sky_surface,(0,0)) # 0,0 is top left of the surface. its like x,y axis
     screen.blit(ground_surface, (0, 300))
     screen.blit(text_surface,(5,5))
+    pygame.draw.line(screen,'Gold',(0,0),pygame.mouse.get_pos())
+    pygame.draw.rect(screen,'Pink',score_rect)
+    pygame.draw.rect(screen,'Pink',score_rect,10)
+    pygame.draw.ellipse(screen,'Brown',pygame.Rect(50,200,100,100))
     screen.blit(score_surface,score_rect)
 
     if snail_rect.x < -100:
